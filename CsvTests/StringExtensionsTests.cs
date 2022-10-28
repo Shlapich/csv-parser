@@ -21,7 +21,7 @@ public class StringExtensionsTests
     [TestCase("1,\"2 with, commas\",3", new[] { "1", "2 with, commas", "3" })]
     [TestCase("1,2,3 ", new[] {"1", "2", "3 "})]
     [TestCase("1 ,2,3", new[] {"1 ", "2", "3"})]
-    public void TestRowCount(string row, params string[] expected)
+    public void TestRowSplit(string row, params string[] expected)
     {
         var actual = row.SplitRow();
         
